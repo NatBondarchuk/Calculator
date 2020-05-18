@@ -31,17 +31,41 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="2">
+    <Units Count="5">
       <Unit0>
         <Filename Value="Calculator.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="unit1.pas"/>
+        <Filename Value="frmmain.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form1"/>
+        <ComponentName Value="Base"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrmMain"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="about.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="About"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="About"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="frmhelp.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Help"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="frmHelp"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="frmeng.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Engineer"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="frmEng"/>
+      </Unit4>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

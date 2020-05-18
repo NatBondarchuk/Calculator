@@ -1,0 +1,67 @@
+object About: TAbout
+  Left = 1122
+  Height = 356
+  Top = 441
+  Width = 474
+  Align = alClient
+  BorderStyle = bsDialog
+  Caption = 'О программе'
+  ClientHeight = 356
+  ClientWidth = 474
+  DragMode = dmAutomatic
+  OnCreate = FormCreate
+  Position = poOwnerFormCenter
+  LCLVersion = '2.0.6.0'
+  Scaled = False
+  object Lbl_about_name: TLabel
+    Left = 24
+    Height = 36
+    Top = 32
+    Width = 256
+    Caption = 'ЛР2. Калькулятор'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Century Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object BitBtn1: TBitBtn
+    Left = 184
+    Height = 34
+    Top = 280
+    Width = 96
+    Default = True
+    DefaultCaption = True
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Century Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = BitBtn1Click
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Lbl_About: TLabel
+    Left = 24
+    Height = 22
+    Top = 112
+    Width = 159
+    Caption = 'ЛР2. Калькулятор'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Century Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+end

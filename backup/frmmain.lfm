@@ -1,0 +1,495 @@
+object Base: TBase
+  Left = 578
+  Height = 498
+  Top = 216
+  Width = 409
+  Caption = 'Калькулятор. Базовый режим'
+  ClientHeight = 478
+  ClientWidth = 409
+  Menu = MainMenu1
+  LCLVersion = '2.0.6.0'
+  object Edit_base: TEdit
+    Left = 20
+    Height = 47
+    Top = 20
+    Width = 368
+    Alignment = taRightJustify
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -32
+    Font.Name = 'Century Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
+    Text = '0'
+  end
+  object but_1: TButton
+    Left = 200
+    Height = 45
+    Top = 264
+    Width = 45
+    Caption = '1'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_1Click
+    ParentFont = False
+    TabOrder = 1
+  end
+  object but_2: TButton
+    Left = 248
+    Height = 45
+    Top = 264
+    Width = 45
+    Caption = '2'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_2Click
+    ParentFont = False
+    TabOrder = 2
+  end
+  object but_3: TButton
+    Left = 296
+    Height = 45
+    Top = 264
+    Width = 45
+    Caption = '3'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_3Click
+    ParentFont = False
+    TabOrder = 3
+  end
+  object but_4: TButton
+    Left = 200
+    Height = 45
+    Top = 312
+    Width = 45
+    Caption = '4'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_4Click
+    ParentFont = False
+    TabOrder = 4
+  end
+  object but_5: TButton
+    Left = 248
+    Height = 45
+    Top = 312
+    Width = 45
+    Caption = '5'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_5Click
+    ParentFont = False
+    TabOrder = 5
+  end
+  object but_6: TButton
+    Left = 296
+    Height = 45
+    Top = 312
+    Width = 45
+    Caption = '6'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_6Click
+    ParentFont = False
+    TabOrder = 6
+  end
+  object but_8: TButton
+    Left = 248
+    Height = 45
+    Top = 360
+    Width = 45
+    Caption = '8'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_8Click
+    ParentFont = False
+    TabOrder = 7
+  end
+  object but_7: TButton
+    Left = 200
+    Height = 45
+    Top = 360
+    Width = 45
+    Caption = '7'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_7Click
+    ParentFont = False
+    TabOrder = 8
+  end
+  object but_9: TButton
+    Left = 296
+    Height = 45
+    Top = 360
+    Width = 45
+    Caption = '9'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_9Click
+    ParentFont = False
+    TabOrder = 9
+  end
+  object minus: TButton
+    Left = 200
+    Height = 45
+    Top = 407
+    Width = 45
+    Caption = '+/-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = minusClick
+    ParentFont = False
+    TabOrder = 10
+  end
+  object but_0: TButton
+    Left = 248
+    Height = 45
+    Top = 407
+    Width = 45
+    Caption = '0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_0Click
+    ParentFont = False
+    TabOrder = 11
+  end
+  object dot: TButton
+    Left = 296
+    Height = 45
+    Top = 407
+    Width = 45
+    Caption = ','
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = dotClick
+    ParentFont = False
+    TabOrder = 12
+  end
+  object but_div: TButton
+    Left = 296
+    Height = 45
+    Top = 216
+    Width = 45
+    Caption = '/'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_divClick
+    ParentFont = False
+    TabOrder = 13
+  end
+  object mult: TButton
+    Left = 343
+    Height = 45
+    Top = 216
+    Width = 45
+    Caption = '*'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = multClick
+    ParentFont = False
+    TabOrder = 14
+  end
+  object but_sub: TButton
+    Left = 343
+    Height = 45
+    Top = 264
+    Width = 45
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_subClick
+    ParentFont = False
+    TabOrder = 15
+  end
+  object but_add: TButton
+    Left = 343
+    Height = 45
+    Top = 312
+    Width = 45
+    Caption = '+'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_addClick
+    ParentFont = False
+    TabOrder = 16
+  end
+  object but_eq: TButton
+    Left = 343
+    Height = 92
+    Top = 360
+    Width = 45
+    Caption = '='
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_eqClick
+    ParentFont = False
+    TabOrder = 17
+  end
+  object but_sqrt: TButton
+    Left = 200
+    Height = 45
+    Top = 216
+    Width = 45
+    Caption = '√'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_sqrtClick
+    ParentFont = False
+    TabOrder = 18
+  end
+  object but_sq: TButton
+    Left = 152
+    Height = 45
+    Top = 216
+    Width = 45
+    Caption = 'x²'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_sqClick
+    ParentFont = False
+    TabOrder = 19
+  end
+  object but_C: TButton
+    Left = 152
+    Height = 45
+    Top = 312
+    Width = 45
+    Caption = 'C'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_CClick
+    ParentFont = False
+    TabOrder = 20
+  end
+  object but_CE: TButton
+    Left = 152
+    Height = 45
+    Top = 360
+    Width = 45
+    Caption = 'CE'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_CEClick
+    ParentFont = False
+    TabOrder = 21
+  end
+  object but_per: TButton
+    Left = 248
+    Height = 45
+    Top = 216
+    Width = 45
+    Caption = '%'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_perClick
+    ParentFont = False
+    TabOrder = 22
+  end
+  object MainMenu1: TMainMenu
+    left = 16
+    top = 96
+    object M_calc: TMenuItem
+      Caption = 'Калькулятор'
+      object M_copy: TMenuItem
+        Caption = 'Копировать'
+        OnClick = M_copyClick
+      end
+      object M_paste: TMenuItem
+        Caption = 'Вставить'
+        OnClick = M_pasteClick
+      end
+    end
+    object M_mode: TMenuItem
+      Caption = 'Режим'
+      object M_base: TMenuItem
+        AutoCheck = True
+        Caption = 'Обычный'
+        Checked = True
+        GroupIndex = 1
+        RadioItem = True
+      end
+      object M_eng: TMenuItem
+        AutoCheck = True
+        Caption = 'Инженерный'
+        GroupIndex = 1
+        RadioItem = True
+        OnClick = M_engClick
+      end
+    end
+    object M_theme: TMenuItem
+      Caption = 'Тема'
+      object M_dark: TMenuItem
+        AutoCheck = True
+        Caption = 'Темная'
+        Checked = True
+        GroupIndex = 1
+        RadioItem = True
+        OnClick = M_darkClick
+      end
+      object M_light: TMenuItem
+        AutoCheck = True
+        Caption = 'Светлая'
+        GroupIndex = 1
+        RadioItem = True
+        OnClick = M_lightClick
+      end
+      object M_child: TMenuItem
+        AutoCheck = True
+        Caption = 'Детская'
+        GroupIndex = 1
+        RadioItem = True
+        OnClick = M_childClick
+      end
+      object M_standart: TMenuItem
+        AutoCheck = True
+        Caption = 'Стандартная'
+        GroupIndex = 1
+        RadioItem = True
+        OnClick = M_standartClick
+      end
+    end
+    object M_lang: TMenuItem
+      Caption = 'Русский/English'
+      object M_RUS: TMenuItem
+        AutoCheck = True
+        Caption = 'Русский'
+        Checked = True
+        GroupIndex = 1
+        RadioItem = True
+        OnClick = M_RUSClick
+      end
+      object M_EN: TMenuItem
+        AutoCheck = True
+        Caption = 'English'
+        GroupIndex = 1
+        RadioItem = True
+        OnClick = M_ENClick
+      end
+    end
+    object M_help: TMenuItem
+      Caption = 'Справка'
+      object M_read: TMenuItem
+        Caption = 'Справка'
+        OnClick = M_readClick
+      end
+      object M_about: TMenuItem
+        Caption = 'О программе'
+        OnClick = M_aboutClick
+      end
+    end
+  end
+end
