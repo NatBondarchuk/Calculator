@@ -40,6 +40,7 @@
         <Filename Value="frmmain.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Base"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrmMain"/>
       </Unit1>
@@ -63,6 +64,7 @@
         <Filename Value="frmeng.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Engineer"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="frmEng"/>
       </Unit4>

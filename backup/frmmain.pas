@@ -263,13 +263,14 @@ begin
         Edit_base.Text := '8'
      else Edit_base.Text := Edit_base.Text + '8';
 end;
-//89
+//9
 procedure TBase.but_9Click(Sender: TObject);
 begin
      if Edit_base.Text = '0' then
         Edit_base.Text := '9'
      else Edit_base.Text := Edit_base.Text + '9';
 end;
+//Запятая
 procedure TBase.dotClick(Sender: TObject);
 begin
   if D = 0 then
@@ -358,9 +359,9 @@ procedure TBase.but_perClick(Sender: TObject);
 begin
    B := StrToFloat(Edit_base.Text);
    Edit_base.Text := FloatToStr(A/100*B);
-
+   C := 5;
 end;
-
+//___________________________________________________________________Смена знака
 procedure TBase.minusClick(Sender: TObject);
 begin
    A := StrToFloat(Edit_base.Text);
@@ -368,7 +369,7 @@ begin
    C := 5;
 end;
 
-//___________________________________________________________________Смена знака
+
 
 
 

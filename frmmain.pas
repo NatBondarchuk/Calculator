@@ -13,6 +13,22 @@ type
   { TBase }
 
   TBase = class(TForm)
+    but_fac: TButton;
+    but_pow: TButton;
+    but_sin: TButton;
+    but_cos: TButton;
+    but_tg: TButton;
+    but_ctg: TButton;
+    but_ln: TButton;
+    but_lg: TButton;
+    but_mod: TButton;
+    SS_8: TButton;
+    SS_7: TButton;
+    SS_6: TButton;
+    SS_5: TButton;
+    SS_4: TButton;
+    SS_3: TButton;
+    SS_2: TButton;
     but_1: TButton;
     minus: TButton;
     but_0: TButton;
@@ -54,6 +70,7 @@ type
     M_paste: TMenuItem;
     M_base: TMenuItem;
     M_eng: TMenuItem;
+    procedure but_facClick(Sender: TObject);
     procedure but_1Click(Sender: TObject);
     procedure but_2Click(Sender: TObject);
     procedure but_3Click(Sender: TObject);
@@ -64,6 +81,14 @@ type
     procedure but_8Click(Sender: TObject);
     procedure but_9Click(Sender: TObject);
     procedure but_0Click(Sender: TObject);
+    procedure but_cosClick(Sender: TObject);
+    procedure but_ctgClick(Sender: TObject);
+    procedure but_lgClick(Sender: TObject);
+    procedure but_lnClick(Sender: TObject);
+    procedure but_modClick(Sender: TObject);
+    procedure but_powClick(Sender: TObject);
+    procedure but_sinClick(Sender: TObject);
+    procedure but_tgClick(Sender: TObject);
     procedure dotClick(Sender: TObject);
     procedure but_addClick(Sender: TObject); //вычитание
     procedure but_subClick(Sender: TObject);  //сложение
@@ -87,6 +112,13 @@ type
     procedure M_readClick(Sender: TObject);
     procedure M_RUSClick(Sender: TObject);
     procedure M_standartClick(Sender: TObject);
+    procedure SS_2Click(Sender: TObject);
+    procedure SS_3Click(Sender: TObject);
+    procedure SS_4Click(Sender: TObject);
+    procedure SS_5Click(Sender: TObject);
+    procedure SS_6Click(Sender: TObject);
+    procedure SS_7Click(Sender: TObject);
+    procedure SS_8Click(Sender: TObject);
   private
 
   public
@@ -200,7 +232,7 @@ procedure TBase.M_aboutClick(Sender: TObject);
 begin
   FrmAbout.show();
 end;
-//____________________________________________________NUMS________________КНОПКИ
+//_________________________________________________________________________ЦИФРЫ
 //0
 procedure TBase.but_0Click(Sender: TObject);
 begin
@@ -288,7 +320,7 @@ begin
   end;
 end;
 //____________________________________________________________________________//
-//___________________________________________________ЗНАКИ________________КНОПКИ
+//_______________________________________________________________________БАЗОВЫЙ
 //______________________________________________________________________Сложение
 procedure TBase.but_addClick(Sender: TObject);
 begin
@@ -368,11 +400,86 @@ begin
    Edit_base.Text := FloatToStr((-1)*A);
    C := 5;
 end;
-
-
-
-
-
-
+//___________________________________________________________________РАСШИРЕННЫЙ
+//_______________________________________________________________Перевод в 01 СС
+procedure TBase.SS_2Click(Sender: TObject);
+begin
+   Edit_base.Text := '01';
+end;
+//______________________________________________________________Перевод в 012 СС
+procedure TBase.SS_3Click(Sender: TObject);
+begin
+   Edit_base.Text := '012';
+end;
+//_____________________________________________________________Перевод в 0123 СС
+procedure TBase.SS_4Click(Sender: TObject);
+begin
+   Edit_base.Text := '0123';
+end;
+//____________________________________________________________Перевод в 01234 СС
+procedure TBase.SS_5Click(Sender: TObject);
+begin
+   Edit_base.Text := '01234';
+end;
+//____________________________________________________________Перевод в 01245 СС
+procedure TBase.SS_6Click(Sender: TObject);
+begin
+   Edit_base.Text := '012345';
+end;
+//___________________________________________________________Перевод в 012456 СС
+procedure TBase.SS_7Click(Sender: TObject);
+begin
+   Edit_base.Text := '0123456';
+end;
+//__________________________________________________________Перевод в 0124567 СС
+procedure TBase.SS_8Click(Sender: TObject);
+begin
+    Edit_base.Text := '01234567';
+end;
+//_____________________________________________________________________Факториал
+procedure TBase.but_facClick(Sender: TObject);
+begin
+   Edit_base.Text := 'n!';
+end;
+//________________________________________________________________________Модуль
+procedure TBase.but_modClick(Sender: TObject);
+begin
+    Edit_base.Text := '|x|';
+end;
+//__________________________________________________________Произвольная степень
+procedure TBase.but_powClick(Sender: TObject);
+begin
+    Edit_base.Text := 'x^y';
+end;
+//__________________________________________________________Натуральный логарифм
+procedure TBase.but_lnClick(Sender: TObject);
+begin
+    Edit_base.Text := 'ln(x)';
+end;
+//___________________________________________________________Десятичный логарифм
+procedure TBase.but_lgClick(Sender: TObject);
+begin
+    Edit_base.Text := 'lg(x)';
+end;
+//________________________________________________________________________Sin(x)
+procedure TBase.but_sinClick(Sender: TObject);
+begin
+    Edit_base.Text := 'sin(x)';
+end;
+//________________________________________________________________________Cos(x)
+procedure TBase.but_cosClick(Sender: TObject);
+begin
+    Edit_base.Text := 'cos(x)';
+end;
+//_________________________________________________________________________tg(x)
+procedure TBase.but_tgClick(Sender: TObject);
+begin
+    Edit_base.Text := 'tg(x)';
+end;
+//________________________________________________________________________Ctg(x)
+procedure TBase.but_ctgClick(Sender: TObject);
+begin
+    Edit_base.Text := 'tg';
+end;
 end.
 
