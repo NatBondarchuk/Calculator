@@ -1,7 +1,7 @@
 object Base: TBase
-  Left = 655
+  Left = 1424
   Height = 364
-  Top = 297
+  Top = 212
   Width = 444
   Caption = 'Калькулятор. Базовый режим'
   ClientHeight = 344
@@ -400,10 +400,10 @@ object Base: TBase
     TabOrder = 22
   end
   object SS_2: TButton
-    Left = 104
+    Left = 152
     Height = 45
     Top = 144
-    Width = 93
+    Width = 45
     Caption = 'X₂'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
@@ -655,12 +655,20 @@ object Base: TBase
     TabOrder = 37
   end
   object but_fac: TButton
-    Left = 159
-    Height = 26
-    Top = 78
-    Width = 27
+    Left = 104
+    Height = 45
+    Top = 144
+    Width = 45
     Caption = 'n!'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
     OnClick = but_facClick
+    ParentFont = False
     TabOrder = 38
   end
   object MainMenu1: TMainMenu

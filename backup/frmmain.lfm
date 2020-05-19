@@ -1,18 +1,18 @@
 object Base: TBase
-  Left = 578
-  Height = 491
-  Top = 223
-  Width = 409
+  Left = 1424
+  Height = 364
+  Top = 212
+  Width = 444
   Caption = 'Калькулятор. Базовый режим'
-  ClientHeight = 471
-  ClientWidth = 409
+  ClientHeight = 344
+  ClientWidth = 444
   Menu = MainMenu1
   LCLVersion = '2.0.6.0'
   object Edit_base: TEdit
-    Left = 16
+    Left = 8
     Height = 47
-    Top = 24
-    Width = 368
+    Top = 16
+    Width = 428
     Alignment = taRightJustify
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
@@ -26,9 +26,9 @@ object Base: TBase
     Text = '0'
   end
   object but_1: TButton
-    Left = 196
+    Left = 248
     Height = 45
-    Top = 168
+    Top = 144
     Width = 45
     Caption = '1'
     Font.CharSet = ANSI_CHARSET
@@ -43,9 +43,9 @@ object Base: TBase
     TabOrder = 1
   end
   object but_2: TButton
-    Left = 244
+    Left = 296
     Height = 45
-    Top = 168
+    Top = 144
     Width = 45
     Caption = '2'
     Font.CharSet = ANSI_CHARSET
@@ -60,9 +60,9 @@ object Base: TBase
     TabOrder = 2
   end
   object but_3: TButton
-    Left = 292
+    Left = 344
     Height = 45
-    Top = 168
+    Top = 144
     Width = 45
     Caption = '3'
     Font.CharSet = ANSI_CHARSET
@@ -77,9 +77,9 @@ object Base: TBase
     TabOrder = 3
   end
   object but_4: TButton
-    Left = 196
+    Left = 248
     Height = 45
-    Top = 216
+    Top = 192
     Width = 45
     Caption = '4'
     Font.CharSet = ANSI_CHARSET
@@ -94,9 +94,9 @@ object Base: TBase
     TabOrder = 4
   end
   object but_5: TButton
-    Left = 244
+    Left = 296
     Height = 45
-    Top = 216
+    Top = 192
     Width = 45
     Caption = '5'
     Font.CharSet = ANSI_CHARSET
@@ -111,9 +111,9 @@ object Base: TBase
     TabOrder = 5
   end
   object but_6: TButton
-    Left = 292
+    Left = 344
     Height = 45
-    Top = 216
+    Top = 192
     Width = 45
     Caption = '6'
     Font.CharSet = ANSI_CHARSET
@@ -128,9 +128,9 @@ object Base: TBase
     TabOrder = 6
   end
   object but_8: TButton
-    Left = 244
+    Left = 296
     Height = 45
-    Top = 264
+    Top = 240
     Width = 45
     Caption = '8'
     Font.CharSet = ANSI_CHARSET
@@ -145,9 +145,9 @@ object Base: TBase
     TabOrder = 7
   end
   object but_7: TButton
-    Left = 196
+    Left = 248
     Height = 45
-    Top = 264
+    Top = 240
     Width = 45
     Caption = '7'
     Font.CharSet = ANSI_CHARSET
@@ -162,9 +162,9 @@ object Base: TBase
     TabOrder = 8
   end
   object but_9: TButton
-    Left = 292
+    Left = 344
     Height = 45
-    Top = 264
+    Top = 240
     Width = 45
     Caption = '9'
     Font.CharSet = ANSI_CHARSET
@@ -179,9 +179,9 @@ object Base: TBase
     TabOrder = 9
   end
   object minus: TButton
-    Left = 196
+    Left = 248
     Height = 45
-    Top = 311
+    Top = 287
     Width = 45
     Caption = '+/-'
     Font.CharSet = ANSI_CHARSET
@@ -196,9 +196,9 @@ object Base: TBase
     TabOrder = 10
   end
   object but_0: TButton
-    Left = 244
+    Left = 296
     Height = 45
-    Top = 311
+    Top = 287
     Width = 45
     Caption = '0'
     Font.CharSet = ANSI_CHARSET
@@ -213,9 +213,9 @@ object Base: TBase
     TabOrder = 11
   end
   object dot: TButton
-    Left = 292
+    Left = 344
     Height = 45
-    Top = 311
+    Top = 287
     Width = 45
     Caption = ','
     Font.CharSet = ANSI_CHARSET
@@ -230,9 +230,9 @@ object Base: TBase
     TabOrder = 12
   end
   object but_div: TButton
-    Left = 244
+    Left = 296
     Height = 45
-    Top = 120
+    Top = 96
     Width = 45
     Caption = '/'
     Font.CharSet = ANSI_CHARSET
@@ -247,9 +247,9 @@ object Base: TBase
     TabOrder = 13
   end
   object mult: TButton
-    Left = 292
+    Left = 344
     Height = 45
-    Top = 120
+    Top = 96
     Width = 45
     Caption = '*'
     Font.CharSet = ANSI_CHARSET
@@ -264,9 +264,9 @@ object Base: TBase
     TabOrder = 14
   end
   object but_sub: TButton
-    Left = 339
+    Left = 391
     Height = 45
-    Top = 120
+    Top = 96
     Width = 45
     Caption = '-'
     Font.CharSet = ANSI_CHARSET
@@ -281,9 +281,9 @@ object Base: TBase
     TabOrder = 15
   end
   object but_add: TButton
-    Left = 339
+    Left = 391
     Height = 92
-    Top = 168
+    Top = 144
     Width = 45
     Caption = '+'
     Font.CharSet = ANSI_CHARSET
@@ -298,9 +298,9 @@ object Base: TBase
     TabOrder = 16
   end
   object but_eq: TButton
-    Left = 339
+    Left = 391
     Height = 92
-    Top = 264
+    Top = 240
     Width = 45
     Caption = '='
     Font.CharSet = ANSI_CHARSET
@@ -315,9 +315,9 @@ object Base: TBase
     TabOrder = 17
   end
   object but_sqrt: TButton
-    Left = 148
+    Left = 200
     Height = 45
-    Top = 264
+    Top = 240
     Width = 45
     Caption = '√'
     Font.CharSet = ANSI_CHARSET
@@ -332,9 +332,9 @@ object Base: TBase
     TabOrder = 18
   end
   object but_sq: TButton
-    Left = 148
+    Left = 200
     Height = 45
-    Top = 312
+    Top = 288
     Width = 45
     Caption = 'x²'
     Font.CharSet = ANSI_CHARSET
@@ -349,9 +349,9 @@ object Base: TBase
     TabOrder = 19
   end
   object but_C: TButton
-    Left = 148
+    Left = 200
     Height = 45
-    Top = 120
+    Top = 96
     Width = 92
     Caption = 'C'
     Font.CharSet = ANSI_CHARSET
@@ -366,9 +366,9 @@ object Base: TBase
     TabOrder = 20
   end
   object but_CE: TButton
-    Left = 148
+    Left = 200
     Height = 45
-    Top = 168
+    Top = 144
     Width = 45
     Caption = 'CE'
     Font.CharSet = ANSI_CHARSET
@@ -383,9 +383,9 @@ object Base: TBase
     TabOrder = 21
   end
   object but_per: TButton
-    Left = 148
+    Left = 200
     Height = 45
-    Top = 216
+    Top = 192
     Width = 45
     Caption = '%'
     Font.CharSet = ANSI_CHARSET
@@ -399,8 +399,280 @@ object Base: TBase
     ParentFont = False
     TabOrder = 22
   end
+  object SS_2: TButton
+    Left = 152
+    Height = 45
+    Top = 144
+    Width = 45
+    Caption = 'X₂'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = SS_2Click
+    ParentFont = False
+    TabOrder = 23
+  end
+  object SS_3: TButton
+    Left = 104
+    Height = 45
+    Top = 191
+    Width = 45
+    Caption = 'X₃'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = SS_3Click
+    ParentFont = False
+    TabOrder = 24
+  end
+  object SS_4: TButton
+    Left = 104
+    Height = 45
+    Top = 240
+    Width = 45
+    Caption = 'X₄'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = SS_4Click
+    ParentFont = False
+    TabOrder = 25
+  end
+  object SS_5: TButton
+    Left = 104
+    Height = 45
+    Top = 287
+    Width = 45
+    Caption = 'X₅'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = SS_5Click
+    ParentFont = False
+    TabOrder = 26
+  end
+  object SS_6: TButton
+    Left = 152
+    Height = 45
+    Top = 192
+    Width = 45
+    Caption = 'X₆'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = SS_6Click
+    ParentFont = False
+    TabOrder = 27
+  end
+  object SS_7: TButton
+    Left = 152
+    Height = 45
+    Top = 240
+    Width = 45
+    Caption = 'X₇'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = SS_7Click
+    ParentFont = False
+    TabOrder = 28
+  end
+  object SS_8: TButton
+    Left = 152
+    Height = 45
+    Top = 287
+    Width = 45
+    Caption = 'X₈'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = SS_8Click
+    ParentFont = False
+    TabOrder = 29
+  end
+  object but_mod: TButton
+    Left = 152
+    Height = 45
+    Top = 96
+    Width = 45
+    Caption = '|x|'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_modClick
+    ParentFont = False
+    TabOrder = 30
+  end
+  object but_pow: TButton
+    Left = 104
+    Height = 45
+    Top = 96
+    Width = 45
+    Caption = 'xⁿ'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_powClick
+    ParentFont = False
+    TabOrder = 31
+  end
+  object but_sin: TButton
+    Left = 8
+    Height = 45
+    Top = 96
+    Width = 93
+    Caption = 'sin(x)'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_sinClick
+    ParentFont = False
+    TabOrder = 32
+  end
+  object but_cos: TButton
+    Left = 8
+    Height = 45
+    Top = 144
+    Width = 93
+    Caption = 'cos(x)'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_cosClick
+    ParentFont = False
+    TabOrder = 33
+  end
+  object but_tg: TButton
+    Left = 8
+    Height = 45
+    Top = 192
+    Width = 93
+    Caption = 'tg(x)'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_tgClick
+    ParentFont = False
+    TabOrder = 34
+  end
+  object but_ctg: TButton
+    Left = 8
+    Height = 45
+    Top = 241
+    Width = 93
+    Caption = 'ctg(x)'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_ctgClick
+    ParentFont = False
+    TabOrder = 35
+  end
+  object but_ln: TButton
+    Left = 56
+    Height = 45
+    Top = 288
+    Width = 45
+    Caption = 'ln'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_lnClick
+    ParentFont = False
+    TabOrder = 36
+  end
+  object but_lg: TButton
+    Left = 8
+    Height = 45
+    Top = 287
+    Width = 45
+    Caption = 'lg'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_lgClick
+    ParentFont = False
+    TabOrder = 37
+  end
+  object but_fac: TButton
+    Left = 104
+    Height = 45
+    Top = 144
+    Width = 45
+    Caption = 'n!'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Book Antiqua'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = but_facClick
+    ParentFont = False
+    TabOrder = 38
+  end
   object MainMenu1: TMainMenu
-    left = 32
+    left = 16
     top = 24
     object M_calc: TMenuItem
       Caption = 'Калькулятор'

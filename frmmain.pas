@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Menus,
-  About, frmHelp, frmEng;
+  About, frmHelp, math;
 
 type
 
@@ -119,6 +119,7 @@ type
     procedure SS_6Click(Sender: TObject);
     procedure SS_7Click(Sender: TObject);
     procedure SS_8Click(Sender: TObject);
+
   private
 
   public
@@ -126,7 +127,6 @@ type
   end;
 var
   Base: TBase;
-
 implementation
 
 {$R *.lfm}
@@ -136,6 +136,19 @@ var
   C, D: integer;
 
 { TBase }
+function change_SS(x: float; y : integer): string;
+var  num: string;
+     x_1: integer;
+begin
+   x_1 := trunc(x);
+   num:='';
+   while ((x_1 div y) >= 1) do
+      begin
+         num := IntToStr(x_1 mod y) + num;
+         x_1 := x_1 div y;
+      end;
+   change_SS := intTostr(x_1)+num;
+end;
 //___________________________________________________________________КАЛЬКУЛЯТОР
 procedure TBase.M_copyClick(Sender: TObject);
 begin
@@ -236,69 +249,69 @@ end;
 //0
 procedure TBase.but_0Click(Sender: TObject);
 begin
-   if Edit_base.Text <> '0' then
+   if ((Edit_base.Text <> '0') or (Edit_base.Text = 'Укажите степень')) then
      Edit_base.Text := Edit_base.Text + '0';
 end;
 //1
 procedure TBase.but_1Click(Sender: TObject);
 begin
-   if Edit_base.Text = '0' then
+   if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
      Edit_base.Text := '1'
   else Edit_base.Text := Edit_base.Text + '1';
 end;
 //2
 procedure TBase.but_2Click(Sender: TObject);
 begin
-  if Edit_base.Text = '0' then
+  if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
      Edit_base.Text := '2'
   else Edit_base.Text := Edit_base.Text + '2';
 end;
 //3
 procedure TBase.but_3Click(Sender: TObject);
 begin
-     if Edit_base.Text = '0' then
+     if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
         Edit_base.Text := '3'
      else Edit_base.Text := Edit_base.Text + '3';
 end;
 //4
 procedure TBase.but_4Click(Sender: TObject);
 begin
-     if Edit_base.Text = '0' then
+     if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
         Edit_base.Text := '4'
      else Edit_base.Text := Edit_base.Text + '4';
 end;
 //5
 procedure TBase.but_5Click(Sender: TObject);
 begin
-      if Edit_base.Text = '0' then
+      if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
          Edit_base.Text := '5'
       else Edit_base.Text := Edit_base.Text + '5';
 end;
 //6
 procedure TBase.but_6Click(Sender: TObject);
 begin
-     if Edit_base.Text = '0' then
+     if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
         Edit_base.Text := '6'
      else Edit_base.Text := Edit_base.Text + '6';
 end;
 //7
 procedure TBase.but_7Click(Sender: TObject);
 begin
-     if Edit_base.Text = '0' then
+     if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
         Edit_base.Text := '7'
      else Edit_base.Text := Edit_base.Text + '7';
 end;
 //8
 procedure TBase.but_8Click(Sender: TObject);
 begin
-     if Edit_base.Text = '0' then
+     if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
         Edit_base.Text := '8'
      else Edit_base.Text := Edit_base.Text + '8';
 end;
 //9
 procedure TBase.but_9Click(Sender: TObject);
 begin
-     if Edit_base.Text = '0' then
+     if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
         Edit_base.Text := '9'
      else Edit_base.Text := Edit_base.Text + '9';
 end;
@@ -357,6 +370,11 @@ begin
      if C = 2 then  Edit_base.Text := FloatToStr(A - B);
      if C = 3 then  Edit_base.Text := FloatToStr(A / B);
      if C = 4 then  Edit_base.Text := FloatToStr(A * B);
+     if C = 6 then
+        begin
+           B := StrToFloat(Edit_base.Text);
+           Edit_base.Text := FloatToStr(power(A,B));
+        end;
 end;
 //_____________________________________________________________Квадратный корень
 procedure TBase.but_sqrtClick(Sender: TObject);
@@ -404,82 +422,109 @@ end;
 //_______________________________________________________________Перевод в 01 СС
 procedure TBase.SS_2Click(Sender: TObject);
 begin
-   Edit_base.Text := '01';
+   Edit_base.Text := change_SS(StrTOFloat(Edit_base.Text), 2);
 end;
 //______________________________________________________________Перевод в 012 СС
 procedure TBase.SS_3Click(Sender: TObject);
 begin
-   Edit_base.Text := '012';
+    Edit_base.Text := change_SS(StrTOFloat(Edit_base.Text), 3);
 end;
 //_____________________________________________________________Перевод в 0123 СС
 procedure TBase.SS_4Click(Sender: TObject);
 begin
-   Edit_base.Text := '0123';
+    Edit_base.Text := change_SS(StrTOFloat(Edit_base.Text), 4);
 end;
 //____________________________________________________________Перевод в 01234 СС
 procedure TBase.SS_5Click(Sender: TObject);
 begin
-   Edit_base.Text := '01234';
+   Edit_base.Text := change_SS(StrTOFloat(Edit_base.Text), 5);
 end;
 //____________________________________________________________Перевод в 01245 СС
 procedure TBase.SS_6Click(Sender: TObject);
 begin
-   Edit_base.Text := '012345';
+   Edit_base.Text := change_SS(StrTOFloat(Edit_base.Text), 6);
 end;
 //___________________________________________________________Перевод в 012456 СС
 procedure TBase.SS_7Click(Sender: TObject);
 begin
-   Edit_base.Text := '0123456';
+   Edit_base.Text := change_SS(StrTOFloat(Edit_base.Text), 7);
 end;
 //__________________________________________________________Перевод в 0124567 СС
 procedure TBase.SS_8Click(Sender: TObject);
 begin
-    Edit_base.Text := '01234567';
+   Edit_base.Text := change_SS(StrTOFloat(Edit_base.Text), 8);
 end;
 //_____________________________________________________________________Факториал
 procedure TBase.but_facClick(Sender: TObject);
+var A_int, fact: integer;
+    i: integer;
 begin
-   Edit_base.Text := 'n!';
+   A := StrToFloat(Edit_base.Text);
+   A_int := trunc(A);
+   if ((A  >= 0) and (A - A_int = 0)) then
+      begin
+         fact := 1;
+         for i := 1 to A_int do
+             fact := fact * i;
+         Edit_base.Text := IntToStr(fact);
+      end
+   else
+     begin
+        Edit_base.Font.Size := 14;
+        Edit_base.Text := 'Только для целых неотрицательных чисел!';
+     end;
 end;
 //________________________________________________________________________Модуль
 procedure TBase.but_modClick(Sender: TObject);
 begin
-    Edit_base.Text := '|x|';
+   A := StrToFloat(Edit_base.Text);
+   if A < 0 then
+      Edit_base.Text := FloatToStr(abs(A))
+   else
+      Edit_base.Text := FloatToStr(A);
 end;
 //__________________________________________________________Произвольная степень
 procedure TBase.but_powClick(Sender: TObject);
 begin
-    Edit_base.Text := 'x^y';
+    A := StrToFloat(Edit_base.Text);
+    Edit_base.Text := 'Укажите степень';
+    C := 6;
 end;
 //__________________________________________________________Натуральный логарифм
 procedure TBase.but_lnClick(Sender: TObject);
 begin
-    Edit_base.Text := 'ln(x)';
+   A := StrToFloat(Edit_base.Text);
+   Edit_base.Text := FloatToStr(ln(A));
 end;
 //___________________________________________________________Десятичный логарифм
 procedure TBase.but_lgClick(Sender: TObject);
 begin
-    Edit_base.Text := 'lg(x)';
+   A := StrToFloat(Edit_base.Text);
+   Edit_base.Text := FloatToStr(log10(A));
 end;
 //________________________________________________________________________Sin(x)
 procedure TBase.but_sinClick(Sender: TObject);
 begin
-    Edit_base.Text := 'sin(x)';
+    A := StrToFloat(Edit_base.Text);
+    Edit_base.Text := FloatToStr(sin(A));
 end;
 //________________________________________________________________________Cos(x)
 procedure TBase.but_cosClick(Sender: TObject);
 begin
-    Edit_base.Text := 'cos(x)';
+    A := StrToFloat(Edit_base.Text);
+    Edit_base.Text := FloatToStr(cos(A));
 end;
 //_________________________________________________________________________tg(x)
 procedure TBase.but_tgClick(Sender: TObject);
 begin
-    Edit_base.Text := 'tg(x)';
+    A := StrToFloat(Edit_base.Text);
+    Edit_base.Text := FloatToStr(tan(A));
 end;
 //________________________________________________________________________Ctg(x)
 procedure TBase.but_ctgClick(Sender: TObject);
 begin
-    Edit_base.Text := 'tg';
+    A := StrToFloat(Edit_base.Text);
+    Edit_base.Text := FloatToStr(cot(A));
 end;
 end.
 
