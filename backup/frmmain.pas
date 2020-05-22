@@ -102,6 +102,7 @@ type
     procedure but_perClick(Sender: TObject); //процент
     procedure minusClick(Sender: TObject); //смена знака
     procedure M_aboutClick(Sender: TObject);
+    procedure M_baseClick(Sender: TObject);
     procedure M_childClick(Sender: TObject);
     procedure M_copyClick(Sender: TObject);
     procedure M_darkClick(Sender: TObject);
@@ -133,22 +134,9 @@ implementation
 
 var
   A, B: double;
-  C, D: integer;
+  C, D, but_num: integer;
 
 { TBase }
-function change_SS(x: float; y : integer): string;
-var  num: string;
-     x_1: integer;
-begin
-   x_1 := trunc(x);
-   num:='';
-   while ((x_1 div y) >= 1) do
-      begin
-         num := IntToStr(x_1 mod y) + num;
-         x_1 := x_1 div y;
-      end;
-   change_SS := intTostr(y-2);
-end;
 //___________________________________________________________________КАЛЬКУЛЯТОР
 procedure TBase.M_copyClick(Sender: TObject);
 begin
@@ -162,10 +150,96 @@ end;
 
 //_____________________________________________________________РЕЖИМ: инженерный
 procedure TBase.M_engClick(Sender: TObject);
+var x: integer;
 begin
-    Base.Width := 400;
-    Edit_base.Width := 380;
+    x := 230;
+    Base.Width := 505;
+    Edit_base.Width := 455;
+    but_fac.Visible := true;
+    but_pow.Visible := true;
+    but_sin.Visible := true;
+    but_cos.Visible := true;
+    but_tg.Visible := true;
+    but_ctg.Visible := true;
+    but_ln.Visible := true;
+    but_lg.Visible := true;
+    but_mod.Visible := true;
+    SS_8.Visible := true;
+    SS_7.Visible := true;
+    SS_6.Visible := true;
+    SS_5.Visible := true;
+    SS_4.Visible := true;
+    SS_3.Visible := true;
+    SS_2.Visible := true;
+    but_sq.left := x + 10;
+    but_C.left := x + 10;
+    but_sqrt.left := x + 10;
+    but_CE.left := x + 10;
+    but_per.left := x + 10;
+    but_7.left := x + 60;
+    but_4.left := x + 60;
+    but_1.left := x + 60;
+    minus.left := x + 60;
+    but_5.left := x + 110;
+    but_2.left := x + 110;
+    but_8.left := x + 110;
+    but_0.left := x + 110;
+    but_div.left := x + 110;
+    but_9.left := x + 160;
+    but_3.left := x + 160;
+    but_6.left := x + 160;
+    dot.left := x + 160;
+    mult.left := x + 160;
+    but_sub.left := x + 210;
+    but_add.left := x + 210;
+    but_eq.left := x + 210;
 end;
+procedure TBase.M_baseClick(Sender: TObject);
+var x: integer;
+begin
+    x:=20;
+    Base.Width := 300;
+    Edit_base.Width := 245;
+    but_fac.Visible := false;
+    but_pow.Visible := false;
+    but_sin.Visible := false;
+    but_cos.Visible := false;
+    but_tg.Visible := false;
+    but_ctg.Visible := false;
+    but_ln.Visible := false;
+    but_lg.Visible := false;
+    but_mod.Visible := false;
+    SS_8.Visible := false;
+    SS_7.Visible := false;
+    SS_6.Visible := false;
+    SS_5.Visible := false;
+    SS_4.Visible := false;
+    SS_3.Visible := false;
+    SS_2.Visible := false;
+    but_sq.left := x + 10;
+    but_C.left := x + 10;
+    but_sqrt.left := x + 10;
+    but_CE.left := x + 10;
+    but_per.left := x + 10;
+    but_7.left := x + 60;
+    but_4.left := x + 60;
+    but_1.left := x + 60;
+    minus.left := x + 60;
+    but_5.left := x + 110;
+    but_2.left := x + 110;
+    but_8.left := x + 110;
+    but_0.left := x + 110;
+    but_div.left := x + 110;
+    but_9.left := x + 160;
+    but_3.left := x + 160;
+    but_6.left := x + 160;
+    dot.left := x + 160;
+    mult.left := x + 160;
+    but_sub.left := x + 210;
+    but_add.left := x + 210;
+    but_eq.left := x + 210;
+end;
+
 //____________________________________________________________________________//
 
 //_______________________________________________________________ТЕМЫ ОФОРМЛЕНИЯ
@@ -199,7 +273,7 @@ end;
 //____________________________________________________________________Английский
 procedure TBase.M_ENClick(Sender: TObject);
 begin
-    M_lang.Caption := 'English/Русский';
+    M_lang.Caption := 'EN/RU';
     M_child.Caption := 'Сhildren`s';
     M_mode.Caption := 'Mode';
     M_calc.Caption := 'Calculator';
@@ -217,7 +291,7 @@ end;
 //_______________________________________________________________________Русский
 procedure TBase.M_RUSClick(Sender: TObject);
 begin
-    M_lang.Caption := 'Русский/English';
+    M_lang.Caption := 'EN/RU';
     M_child.Caption := 'Детская';
     M_mode.Caption := 'Режим';
     M_calc.Caption := 'Калькулятор';
@@ -233,7 +307,6 @@ begin
     M_help.Caption := 'Справка';
 end;
 //____________________________________________________________________________//
-
 //_______________________________________________________________________СПРАВКА
 //______________________________________________________________Смотреть справку
 procedure TBase.M_readClick(Sender: TObject);
@@ -245,92 +318,93 @@ procedure TBase.M_aboutClick(Sender: TObject);
 begin
   FrmAbout.show();
 end;
+
 //_________________________________________________________________________ЦИФРЫ
+function check_but(X : integer; str : string) : string;
+begin
+   if X = 10 then
+      begin
+         if D = 0 then
+            begin
+               check_but := str + ',';
+               D := 1;
+            end
+         else
+            check_but := str;
+      end
+   else
+      begin
+         if ((str <> '0') and (str <> 'Укажите степень')) then
+            check_but := str + IntToStr(X)
+         else
+             check_but := IntToStr(X);
+      end;
+end;
 //0
 procedure TBase.but_0Click(Sender: TObject);
 begin
-   if ((Edit_base.Text <> '0') or (Edit_base.Text = 'Укажите степень')) then
-     Edit_base.Text := Edit_base.Text + '0';
+  but_num := 0;
+  Edit_base.Text := check_but(but_num, Edit_base.Text);
 end;
 //1
 procedure TBase.but_1Click(Sender: TObject);
 begin
-   if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
-     Edit_base.Text := '1'
-  else Edit_base.Text := Edit_base.Text + '1';
+   but_num := 1;
+   Edit_base.Text := check_but(but_num, Edit_base.Text);
 end;
 //2
 procedure TBase.but_2Click(Sender: TObject);
 begin
-  if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
-     Edit_base.Text := '2'
-  else Edit_base.Text := Edit_base.Text + '2';
+  but_num := 2;
+  Edit_base.Text := check_but(but_num, Edit_base.Text);
 end;
 //3
 procedure TBase.but_3Click(Sender: TObject);
 begin
-     if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
-        Edit_base.Text := '3'
-     else Edit_base.Text := Edit_base.Text + '3';
+  but_num := 3;
+  Edit_base.Text := check_but(but_num, Edit_base.Text);
 end;
 //4
 procedure TBase.but_4Click(Sender: TObject);
 begin
-     if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
-        Edit_base.Text := '4'
-     else Edit_base.Text := Edit_base.Text + '4';
+   but_num := 4;
+   Edit_base.Text := check_but(but_num, Edit_base.Text); ;
 end;
 //5
 procedure TBase.but_5Click(Sender: TObject);
 begin
-      if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
-         Edit_base.Text := '5'
-      else Edit_base.Text := Edit_base.Text + '5';
+   but_num := 5;
+   Edit_base.Text := check_but(but_num, Edit_base.Text);
 end;
 //6
 procedure TBase.but_6Click(Sender: TObject);
 begin
-     if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
-        Edit_base.Text := '6'
-     else Edit_base.Text := Edit_base.Text + '6';
+   but_num := 6;
+   Edit_base.Text := check_but(but_num, Edit_base.Text);
 end;
 //7
 procedure TBase.but_7Click(Sender: TObject);
 begin
-     if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
-        Edit_base.Text := '7'
-     else Edit_base.Text := Edit_base.Text + '7';
+   but_num := 7;
+   Edit_base.Text := check_but(but_num, Edit_base.Text);
 end;
 //8
 procedure TBase.but_8Click(Sender: TObject);
 begin
-     if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
-        Edit_base.Text := '8'
-     else Edit_base.Text := Edit_base.Text + '8';
+   but_num := 8;
+   Edit_base.Text := check_but(but_num, Edit_base.Text);
 end;
 //9
 procedure TBase.but_9Click(Sender: TObject);
 begin
-     if ((Edit_base.Text = '0') or (Edit_base.Text = 'Укажите степень')) then
-        Edit_base.Text := '9'
-     else Edit_base.Text := Edit_base.Text + '9';
+  but_num := 9;
+  Edit_base.Text := check_but(but_num, Edit_base.Text);
 end;
 //Запятая
 procedure TBase.dotClick(Sender: TObject);
 begin
-  if D = 0 then
-  begin
-     if Edit_base.Text <> '' then
-        begin
-           Edit_base.Text := Edit_base.Text + ',';
-           D := 1;
-        end
-     else
-       begin
-          Edit_base.Text := '0,';
-          D := 1;
-       end;
-  end;
+  but_num := 10;
+  Edit_base.Text := check_but(but_num, Edit_base.Text);
 end;
 //____________________________________________________________________________//
 //_______________________________________________________________________БАЗОВЫЙ
@@ -375,6 +449,7 @@ begin
            B := StrToFloat(Edit_base.Text);
            Edit_base.Text := FloatToStr(power(A,B));
         end;
+     C := 0;
 end;
 //_____________________________________________________________Квадратный корень
 procedure TBase.but_sqrtClick(Sender: TObject);
@@ -403,6 +478,7 @@ end;
 procedure TBase.but_CEClick(Sender: TObject);
 begin
    Edit_base.Text := '0';
+   D := 0;
 end;
 //______________________________________________________________________Проценты
 procedure TBase.but_perClick(Sender: TObject);
@@ -419,6 +495,23 @@ begin
    C := 5;
 end;
 //___________________________________________________________________РАСШИРЕННЫЙ
+function change_SS(x: float; y : integer): string;  //перевод СС
+var  num: string;
+     x_1: integer;
+begin
+   if D = 0 then
+      begin
+       x_1 := trunc(x);
+       num:='';
+       while ((x_1 div y) >= 1) do
+          begin
+             num := IntToStr(x_1 mod y) + num;
+             x_1 := x_1 div y;
+          end;
+       change_SS := intTostr(x_1)+num;
+      end
+   else change_SS := 'Только для целых чисел';
+end;
 //_______________________________________________________________Перевод в 01 СС
 procedure TBase.SS_2Click(Sender: TObject);
 begin
@@ -470,8 +563,7 @@ begin
       end
    else
      begin
-        Edit_base.Font.Size := 14;
-        Edit_base.Text := 'Только для целых неотрицательных чисел!';
+       Edit_base.Text := 'ERROR';
      end;
 end;
 //________________________________________________________________________Модуль

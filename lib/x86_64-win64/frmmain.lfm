@@ -1,18 +1,18 @@
 object Base: TBase
-  Left = 1424
-  Height = 364
-  Top = 212
-  Width = 444
+  Left = 944
+  Height = 385
+  Top = 325
+  Width = 510
   Caption = 'Калькулятор. Базовый режим'
-  ClientHeight = 344
-  ClientWidth = 444
+  ClientHeight = 365
+  ClientWidth = 510
   Menu = MainMenu1
   LCLVersion = '2.0.6.0'
   object Edit_base: TEdit
-    Left = 8
+    Left = 30
     Height = 47
-    Top = 16
-    Width = 428
+    Top = 20
+    Width = 455
     Alignment = taRightJustify
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
@@ -20,15 +20,16 @@ object Base: TBase
     Font.Name = 'Century Gothic'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
+    HideSelection = False
     ParentFont = False
     ReadOnly = True
     TabOrder = 0
     Text = '0'
   end
   object but_1: TButton
-    Left = 248
+    Left = 290
     Height = 45
-    Top = 144
+    Top = 145
     Width = 45
     Caption = '1'
     Font.CharSet = ANSI_CHARSET
@@ -43,9 +44,9 @@ object Base: TBase
     TabOrder = 1
   end
   object but_2: TButton
-    Left = 296
+    Left = 340
     Height = 45
-    Top = 144
+    Top = 145
     Width = 45
     Caption = '2'
     Font.CharSet = ANSI_CHARSET
@@ -60,9 +61,9 @@ object Base: TBase
     TabOrder = 2
   end
   object but_3: TButton
-    Left = 344
+    Left = 390
     Height = 45
-    Top = 144
+    Top = 145
     Width = 45
     Caption = '3'
     Font.CharSet = ANSI_CHARSET
@@ -77,9 +78,9 @@ object Base: TBase
     TabOrder = 3
   end
   object but_4: TButton
-    Left = 248
+    Left = 290
     Height = 45
-    Top = 192
+    Top = 195
     Width = 45
     Caption = '4'
     Font.CharSet = ANSI_CHARSET
@@ -94,9 +95,9 @@ object Base: TBase
     TabOrder = 4
   end
   object but_5: TButton
-    Left = 296
+    Left = 340
     Height = 45
-    Top = 192
+    Top = 195
     Width = 45
     Caption = '5'
     Font.CharSet = ANSI_CHARSET
@@ -111,9 +112,9 @@ object Base: TBase
     TabOrder = 5
   end
   object but_6: TButton
-    Left = 344
+    Left = 390
     Height = 45
-    Top = 192
+    Top = 195
     Width = 45
     Caption = '6'
     Font.CharSet = ANSI_CHARSET
@@ -128,9 +129,9 @@ object Base: TBase
     TabOrder = 6
   end
   object but_8: TButton
-    Left = 296
+    Left = 340
     Height = 45
-    Top = 240
+    Top = 245
     Width = 45
     Caption = '8'
     Font.CharSet = ANSI_CHARSET
@@ -145,9 +146,9 @@ object Base: TBase
     TabOrder = 7
   end
   object but_7: TButton
-    Left = 248
+    Left = 290
     Height = 45
-    Top = 240
+    Top = 245
     Width = 45
     Caption = '7'
     Font.CharSet = ANSI_CHARSET
@@ -162,9 +163,9 @@ object Base: TBase
     TabOrder = 8
   end
   object but_9: TButton
-    Left = 344
+    Left = 390
     Height = 45
-    Top = 240
+    Top = 245
     Width = 45
     Caption = '9'
     Font.CharSet = ANSI_CHARSET
@@ -179,9 +180,9 @@ object Base: TBase
     TabOrder = 9
   end
   object minus: TButton
-    Left = 248
+    Left = 290
     Height = 45
-    Top = 287
+    Top = 295
     Width = 45
     Caption = '+/-'
     Font.CharSet = ANSI_CHARSET
@@ -196,9 +197,9 @@ object Base: TBase
     TabOrder = 10
   end
   object but_0: TButton
-    Left = 296
+    Left = 340
     Height = 45
-    Top = 287
+    Top = 295
     Width = 45
     Caption = '0'
     Font.CharSet = ANSI_CHARSET
@@ -213,9 +214,9 @@ object Base: TBase
     TabOrder = 11
   end
   object dot: TButton
-    Left = 344
+    Left = 390
     Height = 45
-    Top = 287
+    Top = 295
     Width = 45
     Caption = ','
     Font.CharSet = ANSI_CHARSET
@@ -230,9 +231,9 @@ object Base: TBase
     TabOrder = 12
   end
   object but_div: TButton
-    Left = 296
+    Left = 340
     Height = 45
-    Top = 96
+    Top = 95
     Width = 45
     Caption = '/'
     Font.CharSet = ANSI_CHARSET
@@ -247,9 +248,9 @@ object Base: TBase
     TabOrder = 13
   end
   object mult: TButton
-    Left = 344
+    Left = 390
     Height = 45
-    Top = 96
+    Top = 95
     Width = 45
     Caption = '*'
     Font.CharSet = ANSI_CHARSET
@@ -264,9 +265,9 @@ object Base: TBase
     TabOrder = 14
   end
   object but_sub: TButton
-    Left = 391
+    Left = 440
     Height = 45
-    Top = 96
+    Top = 95
     Width = 45
     Caption = '-'
     Font.CharSet = ANSI_CHARSET
@@ -281,9 +282,9 @@ object Base: TBase
     TabOrder = 15
   end
   object but_add: TButton
-    Left = 391
-    Height = 92
-    Top = 144
+    Left = 440
+    Height = 95
+    Top = 145
     Width = 45
     Caption = '+'
     Font.CharSet = ANSI_CHARSET
@@ -298,9 +299,9 @@ object Base: TBase
     TabOrder = 16
   end
   object but_eq: TButton
-    Left = 391
-    Height = 92
-    Top = 240
+    Left = 440
+    Height = 95
+    Top = 245
     Width = 45
     Caption = '='
     Font.CharSet = ANSI_CHARSET
@@ -315,9 +316,9 @@ object Base: TBase
     TabOrder = 17
   end
   object but_sqrt: TButton
-    Left = 200
+    Left = 240
     Height = 45
-    Top = 240
+    Top = 245
     Width = 45
     Caption = '√'
     Font.CharSet = ANSI_CHARSET
@@ -332,9 +333,9 @@ object Base: TBase
     TabOrder = 18
   end
   object but_sq: TButton
-    Left = 200
+    Left = 240
     Height = 45
-    Top = 288
+    Top = 295
     Width = 45
     Caption = 'x²'
     Font.CharSet = ANSI_CHARSET
@@ -349,10 +350,10 @@ object Base: TBase
     TabOrder = 19
   end
   object but_C: TButton
-    Left = 200
+    Left = 240
     Height = 45
-    Top = 96
-    Width = 92
+    Top = 95
+    Width = 95
     Caption = 'C'
     Font.CharSet = ANSI_CHARSET
     Font.Color = clBlack
@@ -366,9 +367,9 @@ object Base: TBase
     TabOrder = 20
   end
   object but_CE: TButton
-    Left = 200
+    Left = 240
     Height = 45
-    Top = 144
+    Top = 145
     Width = 45
     Caption = 'CE'
     Font.CharSet = ANSI_CHARSET
@@ -383,9 +384,9 @@ object Base: TBase
     TabOrder = 21
   end
   object but_per: TButton
-    Left = 200
+    Left = 240
     Height = 45
-    Top = 192
+    Top = 195
     Width = 45
     Caption = '%'
     Font.CharSet = ANSI_CHARSET
@@ -400,9 +401,9 @@ object Base: TBase
     TabOrder = 22
   end
   object SS_2: TButton
-    Left = 152
+    Left = 180
     Height = 45
-    Top = 144
+    Top = 145
     Width = 45
     Caption = 'X₂'
     Font.CharSet = RUSSIAN_CHARSET
@@ -417,9 +418,9 @@ object Base: TBase
     TabOrder = 23
   end
   object SS_3: TButton
-    Left = 104
+    Left = 130
     Height = 45
-    Top = 191
+    Top = 195
     Width = 45
     Caption = 'X₃'
     Font.CharSet = RUSSIAN_CHARSET
@@ -434,9 +435,9 @@ object Base: TBase
     TabOrder = 24
   end
   object SS_4: TButton
-    Left = 104
+    Left = 130
     Height = 45
-    Top = 240
+    Top = 245
     Width = 45
     Caption = 'X₄'
     Font.CharSet = RUSSIAN_CHARSET
@@ -451,9 +452,9 @@ object Base: TBase
     TabOrder = 25
   end
   object SS_5: TButton
-    Left = 104
+    Left = 130
     Height = 45
-    Top = 287
+    Top = 295
     Width = 45
     Caption = 'X₅'
     Font.CharSet = RUSSIAN_CHARSET
@@ -468,9 +469,9 @@ object Base: TBase
     TabOrder = 26
   end
   object SS_6: TButton
-    Left = 152
+    Left = 180
     Height = 45
-    Top = 192
+    Top = 195
     Width = 45
     Caption = 'X₆'
     Font.CharSet = RUSSIAN_CHARSET
@@ -485,9 +486,9 @@ object Base: TBase
     TabOrder = 27
   end
   object SS_7: TButton
-    Left = 152
+    Left = 180
     Height = 45
-    Top = 240
+    Top = 245
     Width = 45
     Caption = 'X₇'
     Font.CharSet = RUSSIAN_CHARSET
@@ -502,9 +503,9 @@ object Base: TBase
     TabOrder = 28
   end
   object SS_8: TButton
-    Left = 152
+    Left = 180
     Height = 45
-    Top = 287
+    Top = 295
     Width = 45
     Caption = 'X₈'
     Font.CharSet = RUSSIAN_CHARSET
@@ -519,9 +520,9 @@ object Base: TBase
     TabOrder = 29
   end
   object but_mod: TButton
-    Left = 152
+    Left = 180
     Height = 45
-    Top = 96
+    Top = 95
     Width = 45
     Caption = '|x|'
     Font.CharSet = RUSSIAN_CHARSET
@@ -536,9 +537,9 @@ object Base: TBase
     TabOrder = 30
   end
   object but_pow: TButton
-    Left = 104
+    Left = 130
     Height = 45
-    Top = 96
+    Top = 95
     Width = 45
     Caption = 'xⁿ'
     Font.CharSet = RUSSIAN_CHARSET
@@ -553,9 +554,9 @@ object Base: TBase
     TabOrder = 31
   end
   object but_sin: TButton
-    Left = 8
+    Left = 30
     Height = 45
-    Top = 96
+    Top = 95
     Width = 93
     Caption = 'sin(x)'
     Font.CharSet = RUSSIAN_CHARSET
@@ -570,9 +571,9 @@ object Base: TBase
     TabOrder = 32
   end
   object but_cos: TButton
-    Left = 8
+    Left = 30
     Height = 45
-    Top = 144
+    Top = 145
     Width = 93
     Caption = 'cos(x)'
     Font.CharSet = RUSSIAN_CHARSET
@@ -587,9 +588,9 @@ object Base: TBase
     TabOrder = 33
   end
   object but_tg: TButton
-    Left = 8
+    Left = 30
     Height = 45
-    Top = 192
+    Top = 195
     Width = 93
     Caption = 'tg(x)'
     Font.CharSet = RUSSIAN_CHARSET
@@ -604,10 +605,10 @@ object Base: TBase
     TabOrder = 34
   end
   object but_ctg: TButton
-    Left = 8
+    Left = 30
     Height = 45
-    Top = 241
-    Width = 93
+    Top = 245
+    Width = 95
     Caption = 'ctg(x)'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
@@ -621,9 +622,9 @@ object Base: TBase
     TabOrder = 35
   end
   object but_ln: TButton
-    Left = 56
+    Left = 80
     Height = 45
-    Top = 288
+    Top = 295
     Width = 45
     Caption = 'ln'
     Font.CharSet = RUSSIAN_CHARSET
@@ -638,9 +639,9 @@ object Base: TBase
     TabOrder = 36
   end
   object but_lg: TButton
-    Left = 8
+    Left = 30
     Height = 45
-    Top = 287
+    Top = 295
     Width = 45
     Caption = 'lg'
     Font.CharSet = RUSSIAN_CHARSET
@@ -655,9 +656,9 @@ object Base: TBase
     TabOrder = 37
   end
   object but_fac: TButton
-    Left = 104
+    Left = 130
     Height = 45
-    Top = 144
+    Top = 145
     Width = 45
     Caption = 'n!'
     Font.CharSet = RUSSIAN_CHARSET
@@ -693,6 +694,7 @@ object Base: TBase
         Checked = True
         GroupIndex = 1
         RadioItem = True
+        OnClick = M_baseClick
       end
       object M_eng: TMenuItem
         AutoCheck = True
@@ -735,7 +737,7 @@ object Base: TBase
       end
     end
     object M_lang: TMenuItem
-      Caption = 'Русский/English'
+      Caption = 'RU/EN'
       object M_RUS: TMenuItem
         AutoCheck = True
         Caption = 'Русский'
